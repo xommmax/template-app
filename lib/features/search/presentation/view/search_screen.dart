@@ -6,7 +6,10 @@ import 'package:template_app/features/search/presentation/cubit/search_cubit.dar
 class SearchScreen extends StatelessWidget {
   const SearchScreen({
     super.key,
+    required this.query,
   });
+
+  final String query;
 
   @override
   Widget build(BuildContext context) => BlocProvider(

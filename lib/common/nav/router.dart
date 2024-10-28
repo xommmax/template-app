@@ -1,4 +1,3 @@
-import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:flutter/widgets.dart';
 import 'package:go_router/go_router.dart';
 
@@ -7,6 +6,7 @@ import 'package:template_app/common/nav/routes.dart';
 import 'package:template_app/common/widget/scaffold_with_nav_bar.dart';
 import 'package:template_app/features/home/presentation/view/home_screen.dart';
 import 'package:template_app/features/profile/presentation/view/profile_screen.dart';
+import 'package:template_app/features/search/presentation/view/search_screen.dart';
 
 final rootNavigatorKey = GlobalKey<NavigatorState>();
 
@@ -15,7 +15,7 @@ final appRouter = GoRouter(
   debugLogDiagnostics: true,
   navigatorKey: rootNavigatorKey,
   observers: [
-    FirebaseAnalyticsObserver(analytics: FirebaseAnalytics.instance),
+    // FirebaseAnalyticsObserver(analytics: FirebaseAnalytics.instance),
   ],
   routes: [
     StatefulShellRoute.indexedStack(
