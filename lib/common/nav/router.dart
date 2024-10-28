@@ -33,7 +33,8 @@ final appRouter = GoRouter(
   ],
 );
 
-StatefulShellBranch homeBranch({List<RouteBase> routes = const []}) => StatefulShellBranch(
+StatefulShellBranch homeBranch({List<RouteBase> routes = const []}) =>
+    StatefulShellBranch(
       routes: [
         GoRoute(
           path: Routes.home,
@@ -64,7 +65,8 @@ GoRoute searchSubRoute({List<RouteBase> routes = const []}) => GoRoute(
       routes: routes,
     );
 
-StatefulShellBranch profileBranch({List<RouteBase> routes = const []}) => StatefulShellBranch(
+StatefulShellBranch profileBranch({List<RouteBase> routes = const []}) =>
+    StatefulShellBranch(
       routes: [
         GoRoute(
           path: Routes.profile,

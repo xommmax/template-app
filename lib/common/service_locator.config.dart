@@ -12,6 +12,7 @@ import 'package:dio/dio.dart' as _i361;
 import 'package:get_it/get_it.dart' as _i174;
 import 'package:injectable/injectable.dart' as _i526;
 
+import '../features/home/data/home_local_ds.dart' as _i1070;
 import '../features/home/data/home_remote_ds.dart' as _i946;
 import '../features/home/data/home_repository_impl.dart' as _i18;
 import '../features/home/domain/repository/home_repository.dart' as _i855;
@@ -37,8 +38,12 @@ extension GetItInjectableX on _i174.GetIt {
     gh.singleton<_i361.Dio>(() => dataModule.dio);
     gh.singleton<_i946.HomeRemoteDataSource>(
         () => _i946.HomeRemoteDataSourceImpl(gh<_i361.Dio>()));
-    gh.singleton<_i855.HomeRepository>(
-        () => _i18.HomeRepositoryImpl(gh<_i946.HomeRemoteDataSource>()));
+    gh.singleton<_i1070.HomeLocalDataSource>(
+        () => _i1070.HomeLocalDataSourceImpl());
+    gh.singleton<_i855.HomeRepository>(() => _i18.HomeRepositoryImpl(
+          gh<_i946.HomeRemoteDataSource>(),
+          gh<_i1070.HomeLocalDataSource>(),
+        ));
     gh.factory<_i1017.HomeCubit>(
         () => _i1017.HomeCubit(gh<_i855.HomeRepository>()));
     return this;

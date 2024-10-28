@@ -15,12 +15,9 @@ class HomeCubit extends Cubit<HomeState> {
     emit(const HomeState.loading());
     try {
       final data = await homeRepository.getHomeData();
-      emit(HomeState.loaded(
-        data: data
-      ));
+      emit(HomeState.loaded(data: data));
     } catch (e) {
       emit(HomeState.error(error: e.toString()));
     }
   }
-
 }

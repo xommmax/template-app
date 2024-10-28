@@ -12,7 +12,8 @@ class HomeModel with _$HomeModel {
     String? data,
   }) = _HomeModel;
 
-  factory HomeModel.fromJson(Map<String, dynamic> json) => _$HomeModelFromJson(json);
+  factory HomeModel.fromJson(Map<String, dynamic> json) =>
+      _$HomeModelFromJson(json);
 
   @override
   bool operator ==(Object other) =>

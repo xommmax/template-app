@@ -24,8 +24,9 @@ class SearchView extends StatelessWidget {
   });
 
   @override
-  Widget build(BuildContext context) => const Scaffold(
-        body: SafeArea(
+  Widget build(BuildContext context) => Scaffold(
+        appBar: AppBar(),
+        body: const SafeArea(
           child: Center(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,

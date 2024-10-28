@@ -24,7 +24,7 @@ class ScaffoldWithNavBar extends StatelessWidget {
               label: context.l10n.home,
             ),
             BottomNavigationBarItem(
-              icon: const FaIcon(FontAwesomeIcons.user),
+              icon: const FaIcon(FontAwesomeIcons.solidUser),
               label: context.l10n.profile,
             ),
           ],

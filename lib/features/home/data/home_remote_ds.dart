@@ -13,5 +13,6 @@ class HomeRemoteDataSourceImpl implements HomeRemoteDataSource {
   HomeRemoteDataSourceImpl(this.dio);
 
   @override
-  Future<HomeModel> getHomeData() async => const HomeModel(id: 'id', data: 'data');
+  Future<HomeModel> getHomeData() async =>
+      const HomeModel(id: 'my_id', data: 'my_data');
 }
