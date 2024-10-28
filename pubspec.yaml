@@ -1,0 +1,61 @@
+name: template_app
+description: "Template project for Flutter apps."
+publish_to: "none"
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.5.3
+
+dependencies:
+  flutter:
+    sdk: flutter
+  # Core
+  bloc: ^8.1.2
+  flutter_bloc: ^8.1.3
+  flutter_localizations:
+    sdk: flutter
+  intl: any
+  go_router: ^14.2.8
+  freezed_annotation: ^2.2.0
+  json_annotation: ^4.9.0
+  get_it: ^7.7.0
+  injectable: ^2.4.4
+  dio: ^5.7.0
+  pretty_dio_logger: ^1.4.0
+  envied: ^0.5.4+1
+  collection: ^1.18.0
+  # Firebase
+  firebase_core: ^3.6.0
+  firebase_analytics: ^11.3.3
+  firebase_crashlytics: ^4.1.3
+  cloud_firestore: ^5.4.3
+  firebase_auth: ^5.3.1
+  # Tools
+  flutter_launcher_icons: ^0.14.1
+  flutter_native_splash: ^2.4.1
+  font_awesome_flutter: ^10.4.0
+  cached_network_image: ^3.2.3
+  flutter_svg: ^2.0.10+1
+  google_fonts: ^6.2.1
+  shared_preferences: ^2.3.2
+  # Other tools
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+  build_runner: ^2.3.3
+  freezed: ^2.3.4
+  json_serializable: ^6.6.2
+  injectable_generator: ^2.6.2
+  bloc_test: ^9.1.2
+  mocktail: ^1.0.4
+  envied_generator: ^0.5.4+1
+
+flutter:
+  uses-material-design: true
+  generate: true
+  assets:
+    - assets/
+    - assets/icons/
+    - assets/images/
